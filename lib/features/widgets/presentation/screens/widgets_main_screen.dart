@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab/features/homeworks/lesson_13/homework_13_screen.dart';
 import 'package:flutter_lab/features/widgets/presentation/screens/widgets_first_part_screen.dart';
 
 class WidgetsScreen extends StatelessWidget {
@@ -26,16 +25,6 @@ class WidgetsScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute<Widget>(
                   builder: (context) => const WidgetsFirstPartScreen(),
-                ),
-              ),
-            ),
-            NavigationCard(
-              title: 'Homework_13',
-              description: '',
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute<Widget>(
-                  builder: (context) => const Homework13Screen(),
                 ),
               ),
             ),
