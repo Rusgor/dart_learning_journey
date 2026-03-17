@@ -51,3 +51,14 @@ void varFinalConst() {
   const daysInWeek = 7;
   print("Days in week: $daysInWeek");
 }
+
+/// Завдання 4: Record
+void record() {
+  // Позиційний (неіменований) record
+  var person1 = ('Ruslan', 25);
+  print("Position record: Name: ${person1.$1}, Age: ${person1.$2}");
+
+  // Іменований record
+  var person2 = (name: 'Ruslan', age: 25);
+  print("Named record: Name: ${person2.name}, Age: ${person2.age}");
+}
