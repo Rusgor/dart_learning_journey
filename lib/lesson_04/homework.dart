@@ -33,3 +33,21 @@ void collections() {
   Map<String, int> subjects = {"Math": 5, "English": 4, "Science": 3};
   print("Subjects and grades: $subjects");
 }
+
+/// Завдання 3: var, final, const
+void varFinalConst() {
+  var city = "Dnipro";
+  print(city);
+
+  city = "Kyiv";
+  print(city);
+
+  city = "Lviv";
+  print(city);
+
+  final country = "Ukraine";
+  print("Country: $country");
+
+  const daysInWeek = 7;
+  print("Days in week: $daysInWeek");
+}
