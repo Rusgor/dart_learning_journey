@@ -62,3 +62,12 @@ void record() {
   var person2 = (name: 'Ruslan', age: 25);
   print("Named record: Name: ${person2.name}, Age: ${person2.age}");
 }
+
+/// Завдання 5: Nullable
+void nullable() {
+  String? nickname; // може бути null
+  print("Nickname: ${nickname ?? "Немає"}");
+
+  nickname = "Rusi";
+  print("Nickname: ${nickname ?? "Немає"}");
+}
