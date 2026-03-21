@@ -28,8 +28,22 @@ void task1() {
   print('-------------------------');
 }
 
+/// Завдання 2: Оператори порівняння
+void task2() {
+  final int number = 75;
+
+  final bool greaterThan50 = number > 50;
+  final bool lessThan100 = number < 100;
+  final bool divisibleBy5 = number % 5 == 0;
+
+  print('Task 2 — Оператори порівняння:');
+  print('Чи більше 50? $greaterThan50');
+  print('Чи менше 100? $lessThan100');
+  print('Ділиться на 5 без залишку? $divisibleBy5');
+  print('-------------------------');
+}
+
 /// Заглушки для інших завдань
-void task2() {}
 void task3() {}
 void task4() {}
 void task5() {}
