@@ -57,8 +57,20 @@ void task3() {
   print('-------------------------');
 }
 
+/// Завдання 4: Тернарний оператор
+void task4() {
+  final int temperature = 8;
+
+  final String tempDescription = temperature > 25
+      ? 'Тепло'
+      : (temperature < 10 ? 'Дуже холодно' : 'Прохолодно');
+
+  print('Task 4 — Тернарний оператор:');
+  print('Температура: $temperature°C — $tempDescription');
+  print('-------------------------');
+}
+
 /// Заглушки для інших завдань
-void task4() {}
 void task5() {}
 void task6() {}
 void task7() {}
