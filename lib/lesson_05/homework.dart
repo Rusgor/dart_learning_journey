@@ -13,13 +13,13 @@ void main() {
 
 /// Завдання 1: Математичні оператори
 void task1() {
-  final double width = 18.4;
-  final double height = 30.9;
+  final width = 18.4;
+  final height = 30.9;
 
-  final double area = width * height;
-  final double perimeter = 2 * (width + height);
+  final area = width * height;
+  final perimeter = 2 * (width + height);
 
-  final int fullSquares = area ~/ 1;
+  final fullSquares = area ~/ 1;
 
   print('Task 1 — Математичні оператори:');
   print('Площа: $area');
@@ -30,64 +30,58 @@ void task1() {
 
 /// Завдання 2: Оператори порівняння
 void task2() {
-  final int number = 75;
+  final number = 75;
 
-  final bool greaterThan50 = number > 50;
-  final bool lessThan100 = number < 100;
-  final bool divisibleBy5 = number % 5 == 0;
+  final isGreater50 = number > 50;
+  final isLess100 = number < 100;
+  final isDivisibleBy5 = number % 5 == 0;
 
   print('Task 2 — Оператори порівняння:');
-  print('Чи більше 50? $greaterThan50');
-  print('Чи менше 100? $lessThan100');
-  print('Ділиться на 5 без залишку? $divisibleBy5');
+  print('Більше 50? $isGreater50');
+  print('Менше 100? $isLess100');
+  print('Ділиться на 5 без залишку? $isDivisibleBy5');
   print('-------------------------');
 }
 
 /// Завдання 3: Логічні оператори
 void task3() {
-  final bool hasMoney = true;
-  final bool isStoreOpen = false;
+  final hasMoney = true;
+  final isStoreOpen = false;
 
-  final bool canBuy = hasMoney && isStoreOpen;
-  final bool shouldWait = !hasMoney || !isStoreOpen;
+  final canBuy = hasMoney && isStoreOpen;
+  final needToWait = !hasMoney || !isStoreOpen;
 
   print('Task 3 — Логічні оператори:');
-  print('Можна зробити покупку? $canBuy');
-  print('Потрібно почекати? $shouldWait');
+  print('Можна купити? $canBuy');
+  print('Потрібно почекати? $needToWait');
   print('-------------------------');
 }
 
 /// Завдання 4: Тернарний оператор
 void task4() {
-  final int temperature = 8;
+  final temperature = 8;
 
-  final String tempDescription = temperature > 25
+  final tempDesc = temperature > 25
       ? 'Тепло'
-      : (temperature < 10 ? 'Дуже холодно' : 'Прохолодно');
+      : temperature <= 10
+          ? 'Дуже холодно'
+          : 'Прохолодно';
 
   print('Task 4 — Тернарний оператор:');
-  print('Температура: $temperature°C — $tempDescription');
+  print('Температура: $temperature → $tempDesc');
   print('-------------------------');
 }
 
 /// Завдання 5: Оператори присвоєння
 void task5() {
-  int score = 0;
+  var score = 0;
+  final correctAnswers = 17;
+  final mistakes = 3;
+  final totalQuestions = 20;
 
-  final int correctAnswers = 17;
-  final int mistakes = 3;
-  final int totalQuestions = 20;
-
-  // Додаємо бали за правильні відповіді
   score += correctAnswers * 10;
-
-  // Віднімаємо бали за помилки
   score -= mistakes * 5;
-
-  // Збільшуємо бали в 2 рази
   score *= 2;
-
-  // Ділимо на кількість запитань
   score ~/= totalQuestions;
 
   print('Task 5 — Оператори присвоєння:');
@@ -95,116 +89,89 @@ void task5() {
   print('-------------------------');
 }
 
+/// Завдання 6: Умовні конструкції if/else
 void task6() {
-  final int examScore = 77;
+  final examScore = 56;
 
-  print('Task 6 — Умовні конструкції if/else:');
-
+  print('Task 6 — Умовні конструкції:');
   if (examScore > 90) {
     print('Відмінно');
-  } else if (examScore >= 75 && examScore <= 90) {
+  } else if (examScore >= 75) {
     print('Добре');
-  } else if (examScore >= 60 && examScore <= 74) {
+  } else if (examScore >= 60) {
     print('Задовільно');
   } else if (examScore < 20) {
     print('Повторити курс');
   } else {
     print('Не здано');
   }
-
   print('-------------------------');
 }
 
+/// Завдання 7: Конструкція switch statement
 void task7() {
-  final int dayNumber = 4;
+  final dayNumber = 6;
 
-  print('Task 7 — switch statement:');
-
+  print('Task 7 — Switch statement:');
   switch (dayNumber) {
     case 1:
       print('Понеділок');
-      break;
     case 2:
       print('Вівторок');
-      break;
     case 3:
       print('Середа');
-      break;
     case 4:
       print('Четвер');
-      break;
     case 5:
       print('П’ятниця');
-      break;
     case 6:
-      print('Субота — Вихідний день 🎉');
-      break;
+      print('Субота 🎉');
     case 7:
-      print('Неділя — Вихідний день 🎉');
-      break;
+      print('Неділя 🎉');
     default:
-      print('Невірний номер дня');
+      if (dayNumber < 1 || dayNumber > 7) print('Невірний номер дня');
   }
-
   print('-------------------------');
 }
 
+/// Завдання 8: Цикли for
 void task8() {
-  print('Task 8 — цикли for:');
+  print('Task 8 — Цикли for:');
 
-  // Виводимо всі числа від 1 до 10
-  print('Всі числа від 1 до 10:');
-  for (int i = 1; i <= 10; i++) {
+  var sum = 0;
+  for (var i = 1; i <= 10; i++) {
     print(i);
-  }
-
-  // Виводимо тільки парні числа
-  print('Парні числа від 1 до 10:');
-  for (int i = 1; i <= 10; i++) {
-    if (i % 2 == 0) {
-      print(i);
-    }
-  }
-
-  // Обчислюємо суму чисел від 1 до 10
-  int sum = 0;
-  for (int i = 1; i <= 10; i++) {
+    if (i % 2 == 0) print('Парне число: $i');
     sum += i;
   }
   print('Сума чисел від 1 до 10: $sum');
-
   print('-------------------------');
 }
 
+/// Завдання 9: Цикл while
 void task9() {
-  print('Task 9 — цикл while:');
+  print('Task 9 — Цикл while:');
 
-  int num = 10;
-
+  var num = 10;
   while (num > 0) {
     if (num % 2 == 0) {
       print('Парне число: $num');
     } else {
       print('Непарне число: $num');
     }
-    num--; // зменшуємо на 1
+    num--;
   }
-
   print('-------------------------');
 }
 
+/// Завдання 10: Break і Continue
 void task10() {
-  print('Task 10 — break і continue:');
+  print('Task 10 — Break і Continue:');
 
-  for (int i = 1; i <= 20; i++) {
-    if (i % 3 == 0) {
-      continue; // пропускаємо числа, кратні 3
-    }
-    if (i > 15) {
-      break; // зупиняємо цикл після 15
-    }
-    print(i); // виводимо числа, які пройшли перевірки
+  for (var i = 1; i <= 20; i++) {
+    if (i % 3 == 0) continue;
+    if (i > 15) break;
+    print(i);
   }
-
   print('-------------------------');
 }
