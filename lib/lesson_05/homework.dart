@@ -43,8 +43,21 @@ void task2() {
   print('-------------------------');
 }
 
+/// Завдання 3: Логічні оператори
+void task3() {
+  final bool hasMoney = true;
+  final bool isStoreOpen = false;
+
+  final bool canBuy = hasMoney && isStoreOpen;
+  final bool shouldWait = !hasMoney || !isStoreOpen;
+
+  print('Task 3 — Логічні оператори:');
+  print('Можна зробити покупку? $canBuy');
+  print('Потрібно почекати? $shouldWait');
+  print('-------------------------');
+}
+
 /// Заглушки для інших завдань
-void task3() {}
 void task4() {}
 void task5() {}
 void task6() {}
