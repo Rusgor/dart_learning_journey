@@ -95,8 +95,27 @@ void task5() {
   print('-------------------------');
 }
 
+void task6() {
+  final int examScore = 77;
+
+  print('Task 6 — Умовні конструкції if/else:');
+
+  if (examScore > 90) {
+    print('Відмінно');
+  } else if (examScore >= 75 && examScore <= 90) {
+    print('Добре');
+  } else if (examScore >= 60 && examScore <= 74) {
+    print('Задовільно');
+  } else if (examScore < 20) {
+    print('Повторити курс');
+  } else {
+    print('Не здано');
+  }
+
+  print('-------------------------');
+}
+
 /// Заглушки для інших завдань
-void task6() {}
 void task7() {}
 void task8() {}
 void task9() {}
