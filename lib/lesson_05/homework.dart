@@ -70,8 +70,32 @@ void task4() {
   print('-------------------------');
 }
 
+/// Завдання 5: Оператори присвоєння
+void task5() {
+  int score = 0;
+
+  final int correctAnswers = 17;
+  final int mistakes = 3;
+  final int totalQuestions = 20;
+
+  // Додаємо бали за правильні відповіді
+  score += correctAnswers * 10;
+
+  // Віднімаємо бали за помилки
+  score -= mistakes * 5;
+
+  // Збільшуємо бали в 2 рази
+  score *= 2;
+
+  // Ділимо на кількість запитань
+  score ~/= totalQuestions;
+
+  print('Task 5 — Оператори присвоєння:');
+  print('Остаточний результат: $score');
+  print('-------------------------');
+}
+
 /// Заглушки для інших завдань
-void task5() {}
 void task6() {}
 void task7() {}
 void task8() {}
