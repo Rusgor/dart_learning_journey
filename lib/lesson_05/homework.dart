@@ -115,8 +115,41 @@ void task6() {
   print('-------------------------');
 }
 
+void task7() {
+  final int dayNumber = 4;
+
+  print('Task 7 — switch statement:');
+
+  switch (dayNumber) {
+    case 1:
+      print('Понеділок');
+      break;
+    case 2:
+      print('Вівторок');
+      break;
+    case 3:
+      print('Середа');
+      break;
+    case 4:
+      print('Четвер');
+      break;
+    case 5:
+      print('П’ятниця');
+      break;
+    case 6:
+      print('Субота — Вихідний день 🎉');
+      break;
+    case 7:
+      print('Неділя — Вихідний день 🎉');
+      break;
+    default:
+      print('Невірний номер дня');
+  }
+
+  print('-------------------------');
+}
+
 /// Заглушки для інших завдань
-void task7() {}
 void task8() {}
 void task9() {}
 void task10() {}
