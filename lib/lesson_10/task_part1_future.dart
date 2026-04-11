@@ -3,7 +3,7 @@ import 'dart:async';
 Future<String> fetchName() {
   return Future.delayed(
     const Duration(seconds: 2),
-    () => 'Ruslan', // заміни на своє ім'я
+    () => 'Ruslan', // заміни на своє ім’я
   );
 }
 
@@ -26,11 +26,32 @@ String getYearWord(int age) {
 }
 
 void main() async {
+  // =========================
+  // TASK 1 (fetchName)
+  // =========================
   final name = await fetchName();
   print('Мене звати $name');
 
+  // =========================
+  // TASK 2 (fetchAge)
+  // =========================
   final ageString = await fetchAge();
   final age = int.parse(ageString);
 
   print('Мені $age ${getYearWord(age)}');
+
+  // =========================
+  // TASK 3 (Sequential + Stopwatch)
+  // =========================
+  final stopwatch = Stopwatch()..start();
+
+  final nameSeq = await fetchName();
+  final ageSeq = await fetchAge();
+
+  stopwatch.stop();
+
+  print('--- TASK 3 (Sequential) ---');
+  print('Мене звати $nameSeq');
+  print('Мені $ageSeq років');
+  print('Час виконання: ${stopwatch.elapsedMilliseconds} ms');
 }
