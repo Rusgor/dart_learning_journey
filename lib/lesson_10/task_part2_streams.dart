@@ -22,4 +22,18 @@ void main() async {
   stream2.listen(print);
 
   await Future<void>.delayed(const Duration(milliseconds: 100));
+
+  // =========================
+  // TASK 7 (Stream.periodic)
+  // =========================
+  print('--- TASK 7 (periodic) ---');
+
+  final periodicStream = Stream<int>.periodic(
+    const Duration(seconds: 1),
+    (count) => count + 1,
+  ).take(10);
+
+  await for (final value in periodicStream) {
+    print('$value...');
+  }
 }
