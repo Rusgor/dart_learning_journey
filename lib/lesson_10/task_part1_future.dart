@@ -25,6 +25,14 @@ String getYearWord(int age) {
   }
 }
 
+Future<String> delayedCountdown(int seconds) async {
+  for (var i = seconds; i > 0; i--) {
+    print('$i...');
+    await Future<void>.delayed(const Duration(seconds: 1));
+  }
+  return 'Старт!';
+}
+
 void main() async {
   // =========================
   // TASK 1 (fetchName)
@@ -74,4 +82,13 @@ void main() async {
   print('Мене звати $nameParallel');
   print('Мені $ageParallel років');
   print('Час виконання: ${stopwatchParallel.elapsedMilliseconds} ms');
+
+  // =========================
+  // TASK 5 (Countdown)
+  // =========================
+  print('--- TASK 5 (Countdown) ---');
+
+  final result = await delayedCountdown(3);
+
+  print(result);
 }
