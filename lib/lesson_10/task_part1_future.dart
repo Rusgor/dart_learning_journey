@@ -54,4 +54,24 @@ void main() async {
   print('Мене звати $nameSeq');
   print('Мені $ageSeq років');
   print('Час виконання: ${stopwatch.elapsedMilliseconds} ms');
+
+  // =========================
+  // TASK 4 (Parallel + Future.wait)
+  // =========================
+  final stopwatchParallel = Stopwatch()..start();
+
+  final results = await Future.wait<String>([
+    fetchName(),
+    fetchAge(),
+  ]);
+
+  stopwatchParallel.stop();
+
+  final nameParallel = results[0];
+  final ageParallel = results[1];
+
+  print('--- TASK 4 (Parallel) ---');
+  print('Мене звати $nameParallel');
+  print('Мені $ageParallel років');
+  print('Час виконання: ${stopwatchParallel.elapsedMilliseconds} ms');
 }
