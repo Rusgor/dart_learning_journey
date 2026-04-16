@@ -7,3 +7,5 @@ environment:
 
 dev_dependencies:
   lints: ^2.0.1
+dependencies:
+  mocky: ^0.1.2
