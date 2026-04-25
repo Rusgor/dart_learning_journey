@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: flutter_lab
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
@@ -86,3 +87,16 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+=======
+name: dart_learning_journey
+description: Dart homework project
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dev_dependencies:
+  lints: ^2.0.1
+dependencies:
+  mocky: ^0.1.2
+>>>>>>> 773a9f126f2b9629a5c692a1a8805e826a9bb854

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 include: package:flutter_lints/flutter.yaml
+=======
+include: package:lints/recommended.yaml
+>>>>>>> 773a9f126f2b9629a5c692a1a8805e826a9bb854
 
 analyzer:
   language:
@@ -6,10 +10,23 @@ analyzer:
     strict-inference: true
     strict-raw-types: true
   errors:
+<<<<<<< HEAD
+=======
+    cascade_invocations: ignore
+    file_names: ignore
+    inference_failure_on_collection_literal: ignore
+>>>>>>> 773a9f126f2b9629a5c692a1a8805e826a9bb854
     invalid_annotation_target: ignore
     missing_required_param: error
     missing_return: error
     record_literal_one_positional_no_trailing_comma: error
+<<<<<<< HEAD
+=======
+    unawaited_futures: ignore
+    unreachable_from_main: ignore
+    unused_local_variable: ignore
+    use_is_even_rather_than_modulo: ignore
+>>>>>>> 773a9f126f2b9629a5c692a1a8805e826a9bb854
   exclude:
     - lib/**/*.g.dart
 
@@ -81,7 +98,10 @@ linter:
     - use_string_buffers
     - use_super_parameters
     - use_test_throws_matchers
+<<<<<<< HEAD
     # Additional rules for Sonarqube
     - avoid_js_rounded_ints
     - avoid_void_async
     - prefer_mixin
+=======
+>>>>>>> 773a9f126f2b9629a5c692a1a8805e826a9bb854
