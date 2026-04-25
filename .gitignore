@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Miscellaneous
 *.class
 *.log
@@ -12,6 +12,7 @@
 .svn/
 .swiftpm/
 migrate_working_dir/
+devtools_options.yaml
 
 # IntelliJ related
 *.iml
@@ -22,7 +23,7 @@ migrate_working_dir/
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
-#.vscode/
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -45,7 +46,15 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-=======
+
+
+# scripts
+cherry-pick-to-all.sh
+
+# FVM Version Cache
+.fvm/
+.fvmrc
+
 .dart_tool/
 .vscode
->>>>>>> 773a9f126f2b9629a5c692a1a8805e826a9bb854
+
