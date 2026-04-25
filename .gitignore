@@ -1,3 +1,4 @@
+
 # Miscellaneous
 *.class
 *.log
@@ -46,9 +47,14 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+
 # scripts
 cherry-pick-to-all.sh
 
 # FVM Version Cache
 .fvm/
 .fvmrc
+
+.dart_tool/
+.vscode
+
